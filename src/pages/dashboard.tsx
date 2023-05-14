@@ -64,7 +64,7 @@ export default function Dashboard() {
                         Cards.map((text) => {
                             return (
                                 <>
-                                    <Card text={text}/>
+                                    <Card text={text} key={text}/>
                                 </>
                             )
                         })
