@@ -26,7 +26,7 @@ const Card = (_props: CardProps) => {
         desc = "Not sure if a medicine is safe to have? Do not worry as the AI provides the side-effects and when it is best to intake the medicine"
     }
     return (
-        <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" key={_props.text}>
             <a href="#">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{_props.text}</h5>
             </a>
@@ -64,7 +64,7 @@ export default function Dashboard() {
                         Cards.map((text) => {
                             return (
                                 <>
-                                    <Card text={text} key={text}/>
+                                    <Card text={text}/>
                                 </>
                             )
                         })
